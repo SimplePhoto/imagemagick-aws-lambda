@@ -67,10 +67,6 @@ $(LIBFREETYPE): $(FREETYPE_SOURCE) $(GLIB) $(LIBPNG) $(LIBBZ2) $(LIBHARFBUZZ)
 	make
 	make install
 
-
-$(FREETYPE_SOURCE):
-	curl -LO https://download.savannah.gnu.org/releases/freetype/$(FREETYPE_SOURCE)
-
 ## libjpg
 
 LIBJPG_SOURCE=jpegsrc.v$(LIBJPG_VERSION).tar.gz
