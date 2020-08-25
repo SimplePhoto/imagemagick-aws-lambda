@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+if [ "${1}" == "production" ]
+then
+DEPLOYMENT_BUCKET=simplephoto-image-magick-node-12 STACK_NAME=image-magick-node-12 make deploy
+elif [ "${1}" == "canada" ]
+then
+DEPLOYMENT_BUCKET=simplephoto-image-magick-node-12-ca STACK_NAME=image-magick-node-12-ca make deploy
+else
+  echo "Unrecognized environment"
+  exit 1
+fi
