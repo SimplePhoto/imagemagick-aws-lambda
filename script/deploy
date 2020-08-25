@@ -2,6 +2,8 @@
 
 set -e
 
+make clean
+
 if [ "${1}" == "production" ]
 then
 AWS_REGION='us-east-1' DEPLOYMENT_BUCKET='simplephoto-image-magick-node-12' STACK_NAME='image-magick-node-12' make deploy
